@@ -1420,7 +1420,25 @@ var transliterations = {
 		{ letter: /[\u00c9\u00c8\u1eb8]/g, alternative: "E" },
 		{ letter: /[\u1e63]/g, alternative: "s" },
 		{ letter: /[\u1e62]/g, alternative: "S" }
-	]
+	],
+	//Languege: Vietnamese
+    	//Source: http://www.omniglot.com/writing/vietnamese.htm https://en.wikipedia.org/wiki/Vietnamese_language
+	vi: [
+		{ letter: /[\u00C1\u00C0\u1EA2\u00C3\u1EA0\u00C2\u1EA4\u1EA6\u1EA8\u1EAA\u1EAC\u0102\u1EAE\u1EB0\u1EB2\u1EB4\u1EB6]/g, alternative: "A" },
+		{ letter: /[\u00C9\u00C8\u1EBA\u1EBC\u1EB8\u00CA\u1EBE\u1EC0\u1EC2\u1EC4\u1EC6]/g, alternative: "E" },
+		{ letter: /[\u00CD\u00CC\u1EC8\u0128\u1ECA]/g, alternative: "I" },
+		{ letter: /[\u00D3\u00D2\u1ECE\u00D5\u1ECC\u00D4\u1ED0\u1ED2\u1ED4\u1ED6\u1ED8\u01A0\u1EDA\u1EDC\u1EDE\u1EE0\u1EE2]/g, alternative: "O" },
+		{ letter: /[\u00DD\u1EF2\u1EF6\u1EF8\u1EF4]/g, alternative: "Y" },
+		{ letter: /[\u00DA\u00D9\u1EE6\u0168\u1EE4\u01AF\u1EE8\u1EEA\u1EEC\u1EEE\u1EF0]/g, alternative: "U" },
+		{ letter: /[\u00E1\u00E0\u1EA3\u00E3\u1EA1\u00E2\u1EA5\u1EA7\u1EA9\u1EAB\u1EAD\u0103\u1EAF\u1EB1\u1EB3\u1EB5\u1EB7]/g, alternative: "a" },
+		{ letter: /[\u00E9\u00E8\u1EBB\u1EBD\u1EB9\u00EA\u1EBF\u1EC1\u1EC3\u1EC5\u1EC7]/g, alternative: "e" },
+		{ letter: /[\u00ED\u00EC\u1EC9\u0129\u1ECB]/g, alternative: "i" },
+		{ letter: /[\u00F3\u00F2\u1ECF\u00F5\u1ECD\u00F4\u1ED1\u1ED3\u1ED5\u1ED7\u1ED9\u01A1\u1EDB\u1EDD\u1EDF\u1EE1\u1EE3]/g, alternative: "o" },
+		{ letter: /[\u00FD\u1EF3\u1EF7\u1EF9\u1EF5]/g, alternative: "y" },
+		{ letter: /[\u00FA\u00F9\u1EE7\u0169\u1EE5\u01B0\u1EE9\u1EEB\u1EED\u1EEF\u1EF1]/g, alternative: "u" },
+		{ letter: /[\u0111]/g, alternative: "d"},
+		{ letter: /[\u0110]/g, alternative: "D"}
+	    ],
 };
 
 /**
@@ -1582,6 +1600,8 @@ module.exports = function( locale ) {
 			return transliterations.wa;
 		case "yor":
 			return transliterations.yor;
+		case "vi":
+            		return transliterations.vi;
 		default:
 			return [];
 	}
